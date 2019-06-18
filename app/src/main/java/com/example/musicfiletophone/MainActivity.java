@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
         }else {
             Toast.makeText(this,"您已经申请了权限!",Toast.LENGTH_SHORT).show();
-            new NewFileToPhone().newFileToMusic();
+            new NewFileToPhone(MainActivity.this).newFileToMusic();
         }
 
     }
